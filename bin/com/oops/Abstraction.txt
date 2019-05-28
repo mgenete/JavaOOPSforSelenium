@@ -1,0 +1,98 @@
+The four pillars of OOP
+1. Abstraction
+2. Encapsulation
+3. Inheritance
+4. Polymorphysm
+
+1.Abstraction
+===============
+- in java abstraction is achieved through abstract classes and interfaces
+- abstraction is hiding the implementation detail
+- allows to define template for a group of classes/sub-classes
+
+Abstract classes
+- it may or may not include abstract methods
+- it can not be instantiated (no Object)
+- to declare abstract method
+	- use abstract key word
+	- no implementation in the abstract method
+	- abstract class sub-classes provide implementation
+	- sub-classes inherit both abstract & non abstract methods
+
+Interfaces
+	- is used to define behavior in the form of methods and variables that classes must implement
+	- we don't give method body(no implementations)
+	- interface variables are public, static and final
+	- interface methods are non static
+	- can not create the object of interface
+	
+abstract class vs interface
+-if a class is implementing an interface, then it is mandatory to define/override all interface methods
+-abstract class sub-classes must override abstract methods but not non abstract methods
+
+
+
+2.Encapsulation
+====================
+- wrapping of data variables and methods in a unit using classes
+
+why
+-to protect information of Objects
+
+how
+-using access modifiers
+	-public (visible to everyone)
+	-private (visible within class only)
+	-default (no modifier used, visible within package only)
+	-protected (within package and sub-classes)
+	
+	
+	
+3.Inheritance
+==================
+- is a mechanism in which one class acquired the property of another class
+
+why
+- reuse common variables and methods
+
+how
+- using extends keyword
+- encapsulation/access modifier determine what is inherited
+- sub-classes can not inherit private members of class
+- parent can not inherit child class properties
+
+Multiple inheritance
+- is not supported in java
+- (the Diamond problem) if both parents have the same method name, at run time it becomes difficult for the compiler to decide which method to execute from the child class 
+
+
+
+
+4.Polymorphism
+=======================
+- allows sub-classes to define their own unique behavior (variables/methods) and yet share some of the same functionality of the super-class (parent class)
+
+
+Compile time/ static polymorphism
+- method overloading
+
+
+run-time/ dynamic polymorphism
+- method overriding
+- parent class reference is used to refer to child class object
+  Parent obj = new Child();
+- Parent interface reference is used to refer to child class object
+  WebDriver driver = new ChromeDriver();
+  	- using the reference of parent class/interface 
+  	1. we can access overridden methods from child class
+  	2. we can access all sub-classes through a common parent reference for running common operations
+  	3. can not access child class functions
+
+  	
+method overloading
+- is when we have multiple functions with the same name but different parameters
+- by using overloading we can provide additional detail to functions
+
+method overriding
+- when a method is present in parent and child class with the same name
+	
